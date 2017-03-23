@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Todos</h1>
+<ol id="todo_list">
+    <% @todos.each do |todo| %>
+      <li>
+        <span class="xbutton"><%= link_to 'X', todo, method: :delete %></span>
+        <%= todo.name %>
+      </li>
+    <% end %>
+</ol>
+
+<br>
+
+<%= link_to 'New Todo', new_todo_path %>
